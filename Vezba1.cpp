@@ -84,6 +84,10 @@ int main () {
     int n, m;
     cout<<"Insert rows and columns"<<endl;
     cin>>n>>m;
+    if (n > 10 || m > 10) {
+        cout<<"You inserted more rows or columns than expected"<<endl;
+        return 0;
+    }
     int numOfElements = n * m;
     cout<<"Insert elements for the matrix"<<endl;
     readMatrix(matrix, n, m);
